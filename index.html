@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="work-space">
+        <h2>Easy Image Editor</h2>
+        <div class="flex">
+            <div class="left">
+                
+                <div class="filters">
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Saturate</p>
+                        </div>
+                        <input type="range" id="saturate" value="100" min="0" max="200">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                        </div>
+                        <input type="range" id="brightness" value="100" min="0" max="200">
+                        <div class="filter-info">
+                            <p class="name">Grayscale</p>
+                        </div>
+                        <input type="range" id="grayscale" value="0" min="0" max="200">
+
+                        <div class="filter-info">
+                            <p class="name">Sepia</p>
+                        </div>
+                        <input type="range" id="sepia" value="0" min="0" max="200">
+                        <div class="filter-info">
+                            <p class="name">Blur</p>
+                        </div>
+                        <input type="range" id="blur" step="0.1" value="0" min="0" max="8">
+                        <div class="filter-info">
+                            <p class="name">Hue Rotate</p>
+                        </div>
+                        <input type="range" id="hue-rotate" value="0" min="0" max="200">
+                         </div>
+                   <div>
+                    <p class="rotate">Rotate & Flip</p>
+                    <div class="flip">
+                        <button id="left"><i class='bx bx-rotate-right'></i></button>
+                        <button id="right"><i class='bx bx-rotate-left' ></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                    </div>
+                   </div>
+
+                </div>
+            </div>
+            <div class="right">
+                <div class="img_box">
+                    <img id="image" src="image-placeholder.svg"  alt="">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <div>
+                <button id="reset">RESET FILTERS</button>
+            </div>
+            <div>
+                <label for="chose_image" id="chose_image_label">
+                    Choose Image
+                    <input type="file" id="chose_image" name="chose_image">
+                </label>
+                
+                
+                <a download="image" id="save_image">SAVE IMAGE</a>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
